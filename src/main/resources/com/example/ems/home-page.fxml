@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.ems.view.HomePageController" style="-fx-background-color: #f5f5f5;">
+    <children>
+        <!-- Centered VBox for layout -->
+        <VBox alignment="CENTER" spacing="20" layoutX="50" layoutY="50" translateX="-50" translateY="-50">
+            <!-- Logo -->
+            <ImageView fitHeight="100" fitWidth="100">
+                <image>
+                    <Image url="@/com/example/ems/logo.png"/>
+                </image>
+            </ImageView>
+
+            <!-- Welcome Label -->
+            <Label text="Welcome to Employee Management System" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+            <!-- Buttons for navigation with styling -->
+            <Button fx:id="employeesButton" text="Employees Management" onAction="#openEmployeesManagement" style="-fx-font-size: 14px; -fx-background-color: #A8D5BA; -fx-text-fill: white; -fx-pref-width: 200px; -fx-padding: 10px; -fx-background-radius: 5px;" />
+            <Button fx:id="departmentsButton" text="Departments Management" onAction="#openDepartmentsManagement" style="-fx-font-size: 14px; -fx-background-color: #A2C2E6; -fx-text-fill: white; -fx-pref-width: 200px; -fx-padding: 10px; -fx-background-radius: 5px;" />
+            <Button fx:id="attendanceButton" text="Attendance Management" onAction="#openAttendanceManagement" style="-fx-font-size: 14px; -fx-background-color: #F5E1A4; -fx-text-fill: white; -fx-pref-width: 200px; -fx-padding: 10px; -fx-background-radius: 5px;" />
+            <Button fx:id="leaveButton" text="Leave" onAction="#leaveApplication" style="-fx-font-size: 14px; -fx-background-color: #F4A6A3; -fx-text-fill: white; -fx-pref-width: 200px; -fx-padding: 10px; -fx-background-radius: 5px;" />
+
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.ems.view.AttendanceViewController">
+    <Label text="Attendance Management" layoutX="200" layoutY="20" style="-fx-font-size: 20px;" />
+
+    <!-- Attendance Form -->
+    <Label text="Employee ID:" layoutX="30" layoutY="60" />
+    <TextField fx:id="employeeIdField" layoutX="130" layoutY="60" />
+
+    <Label text="Date:" layoutX="30" layoutY="100" />
+    <DatePicker fx:id="dateField" layoutX="130" layoutY="100" />
+
+    <Label text="Status:" layoutX="30" layoutY="140" />
+    <ChoiceBox fx:id="statusChoiceBox" layoutX="130" layoutY="140">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Present" />
+                <String fx:value="Excused Absence" />
+                <String fx:value="Unexcused Absence" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+    <!-- Buttons -->
+    <Button text="Mark Attendance" layoutX="30" layoutY="180" fx:id="markAttendanceButton" />
+    <Button text="Show Attendance History" layoutX="200" layoutY="180" fx:id="showHistoryButton" />
+
+    <!-- Attendance Table -->
+    <TableView fx:id="attendanceTable" layoutX="30" layoutY="230" prefWidth="500" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="attendanceIdColumn" text="ID" prefWidth="50" />
+            <TableColumn fx:id="employeeIdColumn" text="Employee ID" prefWidth="100" />
+            <TableColumn fx:id="dateColumn" text="Date" prefWidth="150" />
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="150" />
+        </columns>
+    </TableView>
+</AnchorPane>
